@@ -6,7 +6,7 @@ import { Grid } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import KEYS from "../keys.js";
-  
+
 function ExploreGroupsCard(props) {
   // We can make it so it outputs cuter later I guess.
   function date(str) {
@@ -44,14 +44,16 @@ function ExploreGroupsCard(props) {
     };
 
     console.log(config);
-    
+
     axios(config)
       .then(function (response) {
-        alert("Success");
+        // alert("Success");
+        console.log("Success");
         console.log(JSON.stringify(response.data));
       })
       .catch(function (error) {
-        alert("error");
+        // alert("error");
+        console.log("error");
         if (error.response) {
           console.log("ERROR: Request made; server responded");
           console.log(error.response.data);

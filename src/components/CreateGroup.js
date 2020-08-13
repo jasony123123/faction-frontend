@@ -48,11 +48,13 @@ class CreateGroup extends React.Component {
 
     axios(config)
       .then(function (response) {
-        alert("Success!");
+        // alert("Success!");
+        console.log("Success!");
         console.log(JSON.stringify(response.data));
       })
       .catch(function (error) {
-        alert("Error");
+        // alert("Error");
+        console.log("Error");
         if (error.response) {
           console.log("ERROR: Request made; server responded");
           console.log(error.response.data);
@@ -66,7 +68,7 @@ class CreateGroup extends React.Component {
           console.log(error.message);
         }
       });
-    this.setState ({
+    this.setState({
       courseName: "",
       link: "",
       startDate: "1999-12-31",

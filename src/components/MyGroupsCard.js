@@ -9,7 +9,6 @@ import Avatar from "@material-ui/core/Avatar";
 import AvatarGroup from "@material-ui/lab/AvatarGroup";
 import { Link } from "react-router-dom";
 
-
 export default function MyGroupsCard(props) {
   function date(str) {
     var correct = str.substring(0, str.indexOf("T"));
@@ -21,7 +20,8 @@ export default function MyGroupsCard(props) {
   const expected_end_date = date(props.info.expected_end_date);
   const date_started = date(props.info.date_started);
   const course_name = props.info.course_name;
-  const status = props.info.status;
+  const status = "Upcoming";
+  //const status = props.info.status;
   const assignments_list = props.info.assignments_list;
 
   return (
@@ -36,38 +36,44 @@ export default function MyGroupsCard(props) {
             </Grid>
           </Grid>
 
-
-          <Grid item xs={3} spacing={1} container >
+          <Grid item xs={3} spacing={1} container>
             <Grid item xs={12}>
-              <Button
-                variant="contained"
-                color="secondary"
-                disableElevation
-              >
+              <Button variant="contained" color="secondary" disableElevation>
                 {status}
               </Button>
             </Grid>
             <Grid item xs={12}>
-              {assignments_list.split("\n").map((item, i) => (
-                <div key={i}>
-                  <Typography variant="subtitle1">{item}</Typography>
-                </div>
-              ))}
+              {assignments_list
+                .split("\n")
+                .slice(0, 5)
+                .map((item, i) => (
+                  <div key={i}>
+                    <Typography variant="subtitle1">- {item}</Typography>
+                  </div>
+                ))}
             </Grid>
           </Grid>
-
 
           <Grid item xs={3}>
             <Grid container direction="column" alignItems="center" spacing={2}>
               <Grid item xs={12}>
-                <Typography variant="body1"> Start Date: {date_started} </Typography>
+                <Typography variant="body1">
+                  {" "}
+                  Start Date: {date_started}{" "}
+                </Typography>
               </Grid>
               <Grid item xs={12}>
-                <Typography variant="body1"> End Date: {expected_end_date} </Typography>
+                <Typography variant="body1">
+                  {" "}
+                  End Date: {expected_end_date}{" "}
+                </Typography>
               </Grid>
-               <Grid item xs={12}>
-                <Button color="inherit" component={Link} to={"/group/" + id}> Visit Group </Button>
-              </Grid>             
+              <Grid item xs={12}>
+                <Button color="inherit" onClick={() => (window.location.href = "/group/" + id)}>
+                  {" "}
+                  Visit Group{" "}
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>

@@ -5,4 +5,4 @@ Faction is a web application designed to foster small group interactions in Mass
 This is the front-end repo. It was made primarily with React and Material-UI
 
 # Deployment
-See Link Here: 
+Check it out: https://faction-front-end.herokuapp.com/

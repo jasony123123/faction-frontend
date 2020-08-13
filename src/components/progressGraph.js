@@ -4,7 +4,7 @@ import {
   Chart,
   BarSeries,
   Title,
-  ArgumentAxis
+  ArgumentAxis,
 } from "@devexpress/dx-react-chart-material-ui";
 
 import { Animation, ArgumentScale } from "@devexpress/dx-react-chart";
@@ -13,24 +13,24 @@ import { scaleBand } from "d3-scale";
 export const data = [
   {
     class: "",
-    ModsCompleted: 0
+    ModsCompleted: 0,
   },
   {
     class: "",
-    ModsCompleted: 0
+    ModsCompleted: 0,
   },
   {
     class: "Jack",
-    ModsCompleted: 1
+    ModsCompleted: 1,
   },
   {
     class: "Jesuu",
-    ModsCompleted: 2
+    ModsCompleted: 2,
   },
   {
     class: "Katy",
-    ModsCompleted: 3
-  }
+    ModsCompleted: 3,
+  },
 ];
 
 export default class Graph extends React.PureComponent {
@@ -38,14 +38,13 @@ export default class Graph extends React.PureComponent {
     super(props);
 
     this.state = {
-      data
+      data,
     };
   }
 
   render() {
     const { data: chartData } = this.state;
     console.log({ chartData });
-
     return (
       <Paper>
         <Chart data={chartData} rotated>

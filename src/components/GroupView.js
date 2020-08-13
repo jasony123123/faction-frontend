@@ -14,10 +14,48 @@ class GroupView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      completionStatus: [true,true,true,true,true,false,false,false,false,false,false,false,false,false,false,false,false,false],
-      assignmentName: ["Introduction","Linear Regression with One Variable","Linear Algebra Review","Linear Regression with Multiple Variables","Octave/Matlab Tutorial","Logistic Regression","Regularization","Neural Networks: Representation","Neural Networks: Learning","Advice for Applying Machine Learning","Machine Learning System Design","Support Vector Machines","Unsupervised Learning","Dimensionality Reduction","Anomaly Detection","Recommender Systems","Large Scale Machine Learning","Application Example: Photo OCR"],
+      completionStatus: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ],
+      assignmentName: [
+        "Introduction",
+        "Linear Regression with One Variable",
+        "Linear Algebra Review",
+        "Linear Regression with Multiple Variables",
+        "Octave/Matlab Tutorial",
+        "Logistic Regression",
+        "Regularization",
+        "Neural Networks: Representation",
+        "Neural Networks: Learning",
+        "Advice for Applying Machine Learning",
+        "Machine Learning System Design",
+        "Support Vector Machines",
+        "Unsupervised Learning",
+        "Dimensionality Reduction",
+        "Anomaly Detection",
+        "Recommender Systems",
+        "Large Scale Machine Learning",
+        "Application Example: Photo OCR",
+      ],
       courseName: "Machine Learning, Coursera",
-      dateString: "June 6, 2020 - September 10, 2020",
+      dateString: "August 14, 2020 - January 14, 2021",
       courseLink: "https://www.coursera.org/learn/machine-learning",
     };
     this.handleChange = this.handleChange.bind(this);
@@ -93,11 +131,17 @@ class GroupView extends React.Component {
               <hr />
               <Divider />
               <hr />
-
             </Grid>
           </Grid>
 
-          <Grid item container directon="row" justify="center" alignItems="center" spacing={3}>
+          <Grid
+            item
+            container
+            directon="row"
+            justify="center"
+            alignItems="center"
+            spacing={3}
+          >
             <Grid item xs={1}>
               <Typography variant="body2">
                 “Nothing ever got accomplished by quitting” - unknown

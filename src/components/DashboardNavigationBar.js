@@ -11,7 +11,6 @@ import AvatarBubble from "./AvatarBubble";
 class DashboardNavigationBar extends React.Component {
   handleClick() {
     window.localStorage.clear();
-    alert("success");
     window.location.reload();
   }
 

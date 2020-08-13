@@ -83,7 +83,9 @@ class MyGroups extends React.Component {
     return (
       <List class="cov">
         <ListItem>
-          <WhiteTextTypography variant="h4">{localStorage.getItem("first_name") + "'s Dashboard"}</WhiteTextTypography>
+          <WhiteTextTypography variant="h4">
+            {localStorage.getItem("first_name") + "'s Dashboard"}
+          </WhiteTextTypography>
         </ListItem>
         <ListItem
           button
@@ -101,7 +103,9 @@ class MyGroups extends React.Component {
             this.setState({ filter: "fal" });
           }}
         >
-          <WhiteTextTypography variant="h6">Falling Behind Groups</WhiteTextTypography>
+          <WhiteTextTypography variant="h6">
+            Falling Behind Groups
+          </WhiteTextTypography>
         </ListItem>
         <ListItem
           button
@@ -110,7 +114,9 @@ class MyGroups extends React.Component {
             this.setState({ filter: "inp" });
           }}
         >
-          <WhiteTextTypography variant="h6">In Progress Groups</WhiteTextTypography>
+          <WhiteTextTypography variant="h6">
+            In Progress Groups
+          </WhiteTextTypography>
         </ListItem>
         <ListItem
           button
@@ -119,7 +125,9 @@ class MyGroups extends React.Component {
             this.setState({ filter: "com" });
           }}
         >
-          <WhiteTextTypography variant="h6">Completed Groups</WhiteTextTypography>
+          <WhiteTextTypography variant="h6">
+            Completed Groups
+          </WhiteTextTypography>
         </ListItem>
       </List>
     );

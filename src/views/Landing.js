@@ -2,14 +2,13 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
 
 import LandingNavigationBar from "../components/LandingNavigationBar";
 import LoginForm from "../components/LoginForm";
 import RegisterForm from "../components/RegisterForm";
 import "../styles/Landing.css";
-
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
 
 class Landing extends React.Component {
   render() {
@@ -25,23 +24,13 @@ class Landing extends React.Component {
               />
               <Grid item xs={2} />
               <Grid item xs={8}>
-                <div>
-                  <Typography
-                    variant="h3"
-                    gutterbottom
-                    className="missionTitle up"
-                  >
-                    Join a collaborative community of problem solvers
-                  </Typography>
-                  <Typography
-                    variant="h5"
-                    gutterbottom
-                    className="missionTitle down"
-                  >
-                    Our mission is to create a truly collaborative learning
-                    enviornment. INSERT SOME SHIT HERE.
-                  </Typography>
-                </div>
+                <Typography
+                  variant="h3"
+                  gutterBottom
+                  className="missionTitle down"
+                >
+                  Join a collaborative community of problem solvers
+                </Typography>
               </Grid>
               <Grid item xs={2}></Grid>
             </Grid>

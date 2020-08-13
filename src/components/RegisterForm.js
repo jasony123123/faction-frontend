@@ -78,7 +78,7 @@ class RegisterForm extends React.Component {
     };
     axios(config)
       .then(function (response) {
-        alert("Successfully Registered");
+        // alert("Successfully Registered");
         console.log(JSON.stringify(response.data));
       })
       .catch(function (error) {
@@ -99,7 +99,6 @@ class RegisterForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     const err = this.validation();
-    console.log("err");
     if (!err) {
       this.postData();
       this.setState({
@@ -126,7 +125,7 @@ class RegisterForm extends React.Component {
           label="First Name:"
           value={data.first_name}
           onChange={this.handleChange}
-          error={data.first_nameError}
+          error={data.first_nameError.length > 0}
           helperText={data.first_nameError}
           fullWidth
         />
@@ -137,7 +136,7 @@ class RegisterForm extends React.Component {
           label="Last Name:"
           value={data.last_name}
           onChange={this.handleChange}
-          error={data.last_nameError}
+          error={data.last_nameError.length > 0}
           helperText={data.last_nameError}
           fullWidth
         />
@@ -148,7 +147,7 @@ class RegisterForm extends React.Component {
           label="Email Address:"
           value={data.email}
           onChange={this.handleChange}
-          error={data.emailError}
+          error={data.emailError.length > 0}
           helperText={data.emailError}
           fullWidth
           required={true}
@@ -160,7 +159,7 @@ class RegisterForm extends React.Component {
           label="Password:"
           value={data.password}
           onChange={this.handleChange}
-          error={data.passwordError}
+          error={data.passwordError.length > 0}
           helperText={data.passwordError}
           fullWidth
         />
@@ -171,7 +170,7 @@ class RegisterForm extends React.Component {
           label="Confirm Password:"
           value={data.password2}
           onChange={this.handleChange}
-          error={data.password2Error}
+          error={data.password2Error.length > 0}
           helperText={data.password2Error}
           fullWidth
         />
